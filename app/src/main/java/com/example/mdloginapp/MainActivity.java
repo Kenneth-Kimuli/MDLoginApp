@@ -5,12 +5,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button login;
+    private EditText user_name;
+    private EditText password;
 
 
     @Override
@@ -18,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        login = findViewById(R.id.loginButton);
+        viewsSetup();
+        userAuth();
 
         login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -28,5 +31,26 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(myIntent);
             }
         });
+    }
+
+    public void viewsSetup(){
+        login = findViewById(R.id.loginButton);
+        user_name = findViewById(R.id.eTusername);
+        password = findViewById(R.id.eTusername);
+
+        //user_name.getText().toString();
+        //password.getText().toString();
+
+    }
+
+    public void userAuth(){
+        if (user_name.getText().toString().equals("Kenneth") && password.getText().toString().equals("1234")){
+
+            Toast.makeText(this, "Log in successful", Toast.LENGTH_SHORT).show();
+        }else {
+
+            Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

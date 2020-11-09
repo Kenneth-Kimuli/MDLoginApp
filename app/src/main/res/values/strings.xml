@@ -4,4 +4,5 @@
     <string name="pwd">Password</string>
     <string name="login">LOG IN</string>
     <string name="forgotpwd">Forgot Password?</string>
+    <string name="welcome">Welcome to MDLoginApp</string>
 </resources>
