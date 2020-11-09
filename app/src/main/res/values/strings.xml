@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MDLoginApp</string>
+    <string name="username">Username</string>
+    <string name="pwd">Password</string>
+    <string name="login">LOG IN</string>
+    <string name="forgotpwd">Forgot Password?</string>
+</resources>
